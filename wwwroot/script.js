@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateRandomWordBtn = document.getElementById('generate-random-word');
     const randomWordSpan = document.getElementById('random-word');
 
-    const API_BASE_URL = 'http://localhost:5134'; // Certifique-se de que esta URL corresponde à sua API
+    //HML
+    /*const API_BASE_URL = 'http://localhost:5134'*/
+    //PRD 
+    const API_BASE_URL = 'https://palavrimapi.onrender.com/';
 
     // Função para buscar e exibir o tamanho da palavra
     async function fetchWordSize() {
