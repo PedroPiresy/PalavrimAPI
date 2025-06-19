@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //HML
     /*const API_BASE_URL = 'http://localhost:5134'*/
     //PRD 
-    const API_BASE_URL = 'https://palavrimapi.onrender.com/';
+    const API_BASE_URL = 'https://palavrimapi.onrender.com';
 
     // Função para buscar e exibir o tamanho da palavra
     async function fetchWordSize() {
