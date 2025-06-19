@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using PalavrimAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +16,14 @@ builder.Services.AddCors(options =>
         policy => policy.WithOrigins("http://localhost:5173")
                         .AllowAnyHeader()
                         .AllowAnyMethod());
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("https://seufront.vercel.app") // ✅ Substitua pelo domínio exato do seu frontend
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
+
 
 var app = builder.Build();
 
