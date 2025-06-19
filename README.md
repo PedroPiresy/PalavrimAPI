@@ -73,7 +73,7 @@ true
 
 2. **Clone o repositório:**
    ```bash
-   git clone <url-do-repositorio>
+   git clone https://github.com/PedroPiresy/PalavrimAPI.git
    cd PalavrimAPI
    ```
 
