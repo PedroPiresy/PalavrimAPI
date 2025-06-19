@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+}
+
+header {
+    background-color: #6a0dad; /* Roxo escuro */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.wizard-image {
+    width: 120px;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 50%;
+    border: 4px solid #8a2be2; /* Roxo médio */
+}
+
+.message {
+    font-size: 1.2em;
+    color: #8a2be2; /* Roxo médio */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.api-info, .api-interactions {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.api-info h2, .api-interactions h2 {
+    color: #6a0dad; /* Roxo escuro */
+    margin-top: 0;
+    font-size: 1.8em;
+    border-bottom: 2px solid #6a0dad;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.api-info p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.api-info span {
+    font-weight: bold;
+    color: #8a2be2;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Espaço entre os grupos de input/botão */
+    gap: 10px; /* Espaço entre input e botão */
+}
+
+.api-interactions input[type="text"] {
+    flex-grow: 1; /* Permite que o input ocupe o espaço disponível */
+    padding: 10px;
+    /* margin-right removido, substituído por gap */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.api-interactions button {
+    padding: 10px 20px;
+    background-color: #8a2be2; /* Roxo médio */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.api-interactions button:hover {
+    background-color: #6a0dad; /* Roxo escuro */
+}
+
+.api-interactions ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.api-interactions li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.api-interactions li:last-child {
+    border-bottom: none;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+} 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palavrim API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bem-vindo à API do Palavrim!</h1>
+            <img src="8545842.png" alt="Mago Roxo" class="wizard-image">
+        </header>
+        <main>
+            <p class="message">A magia das palavras está no ar...</p>
+            <div class="api-info">
+                <h2>Informações da API:</h2>
+                <p>Tamanho da palavra do dia: <span id="word-size">Carregando...</span></p>
+                <p>Palavra do dia: <span id="daily-word">Carregando...</span></p>
+            </div>
+            <div class="api-interactions">
+                <h2>Interaja com a API:</h2>
+                <div class="input-group">
+                    <input type="text" id="prefix-input" placeholder="Buscar por prefixo">
+                    <button id="search-prefix">Buscar</button>
+                </div>
+                <ul id="prefix-results"></ul>
+
+                <div class="input-group">
+                    <input type="text" id="suffix-input" placeholder="Buscar por sufixo">
+                    <button id="search-suffix">Buscar</button>
+                </div>
+                <ul id="suffix-results"></ul>
+            </div>
+            <div class="api-interactions">
+                <h2>Gerar Palavra Aleatória:</h2>
+                <button id="generate-random-word">Gerar Automaticamente</button>
+                <p>Palavra Aleatória: <span id="random-word">--</span></p>
+            </div>
+            <div class="api-routes">
+                <h2>Rotas da API:</h2>
+                <ul>
+                    <li><code>GET /tamanho</code> - Retorna o tamanho da palavra do dia.</li>
+                    <li><code>GET /palavra-do-dia</code> - Retorna a palavra do dia.</li>
+                    <li><code>GET /palavra-aleatoria</code> - Retorna uma palavra aleatória.</li>
+                    <li><code>GET /prefixo/{prefixo}</code> - Busca palavras que começam com o prefixo.</li>
+                    <li><code>GET /sufixo/{sufixo}</code> - Busca palavras que terminam com o sufixo.</li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 PalaMago API. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
