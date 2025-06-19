@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomWordSpan = document.getElementById('random-word');
 
     //HML
-    /*const API_BASE_URL = 'http://localhost:5134'*/
+    //const API_BASE_URL = 'http://localhost:5134'
     //PRD 
     const API_BASE_URL = 'https://palavrimapi.onrender.com';
 

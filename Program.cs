@@ -9,28 +9,29 @@ var builder = WebApplication.CreateBuilder(args);
 // Registrar o serviço como Singleton para reaproveitar a mesma instância
 builder.Services.AddSingleton(new PalavrimService(5));
 
-// ✅ Adiciona política de CORS permitindo o front-end
+// Defina as origens permitidas para cada ambiente
+string[] allowedOriginsLocal = new[] { "http://localhost:5173", "http://localhost:5134" };
+string[] allowedOriginsProd = new[] { "https://palavrim.vercel.app" };
+
+//string[] allowedOrigins = allowedOriginsLocal;
+string[] allowedOrigins = allowedOriginsProd;
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
-        policy => policy.WithOrigins("http://localhost:5173")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod());
-    options.AddPolicy("AllowFrontend", policy =>
-    {
-        policy.WithOrigins("https://palavrim.vercel.app")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
+        policy => policy
+            .WithOrigins(allowedOrigins)
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 });
-
 
 var app = builder.Build();
 
 app.UseStaticFiles();
 
-// ✅ Aplica o CORS antes dos endpoints
+// Aplica o CORS antes dos endpoints
 app.UseCors("AllowFrontend");
+
 
 app.MapGet("/", () => Results.Redirect("/index.html"));
 

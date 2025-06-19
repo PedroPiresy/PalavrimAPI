@@ -223295,8 +223295,6 @@ soe
 soei
 soeis
 soem
-soemo
-soemos
 soerga
 soergais
 soergam
