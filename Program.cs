@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
                         .AllowAnyMethod());
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("https://seufront.vercel.app") // ✅ Substitua pelo domínio exato do seu frontend
+        policy.WithOrigins("https://palavrim.vercel.app")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
