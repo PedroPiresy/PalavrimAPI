@@ -10,13 +10,13 @@ namespace PalavrimAPI.Services
 
         public PalavrimService(int tamanhoPalavra = 5)
         {
-            var caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PalavrimWordList", "portuguese.txt");
-            _palavras = File.ReadAllLines(caminhoArquivo)
-                            .Select(p => RemoverAcentos(p.ToLower().Trim()))
+            var caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PalavrimWordList", "teste.txt");
+            // MANTÉM os acentos aqui:
+            _palavras = File.ReadAllLines(caminhoArquivo, Encoding.UTF8)
+                            .Select(p => p.ToLower().Trim()) // não remove acentos
                             .Where(p => p.Length == tamanhoPalavra)
                             .Distinct()
                             .ToList();
-
 
             _tamanhoPalavra = tamanhoPalavra;
         }
@@ -25,7 +25,8 @@ namespace PalavrimAPI.Services
 
         public bool PalavraValida(string palavra)
         {
-            return _palavras.Contains(RemoverAcentos(palavra.ToLower()));
+            // Valida removendo acentos de ambos os lados
+            return _palavras.Any(p => RemoverAcentos(p) == RemoverAcentos(palavra.ToLower()));
         }
 
         public string PalavraDoDia()
@@ -44,13 +45,13 @@ namespace PalavrimAPI.Services
         public List<string> BuscarPorPrefixo(string prefixo)
         {
             prefixo = RemoverAcentos(prefixo.ToLower());
-            return _palavras.Where(p => p.StartsWith(prefixo)).ToList();
+            return _palavras.Where(p => RemoverAcentos(p).StartsWith(prefixo)).ToList();
         }
 
         public List<string> BuscarPorSufixo(string sufixo)
         {
             sufixo = RemoverAcentos(sufixo.ToLower());
-            return _palavras.Where(p => p.EndsWith(sufixo)).ToList();
+            return _palavras.Where(p => RemoverAcentos(p).EndsWith(sufixo)).ToList();
         }
 
         public List<string> TodasPalavras() => _palavras;
