@@ -10,7 +10,7 @@ namespace PalavrimAPI.Services
 
         public PalavrimService(int tamanhoPalavra = 5)
         {
-            var caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PalavrimWordList", "teste.txt");
+            var caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PalavrimWordList", "portugueseV2.txt");
             // MANTÉM os acentos aqui:
             _palavras = File.ReadAllLines(caminhoArquivo, Encoding.UTF8)
                             .Select(p => p.ToLower().Trim()) // não remove acentos
@@ -61,6 +61,30 @@ namespace PalavrimAPI.Services
             return new string(texto.Normalize(NormalizationForm.FormD)
                 .Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
                 .ToArray());
+        }
+        public string? BuscarPalavraAcentuada(string palavraSemAcento)
+        {
+            // Remove acentos da palavra de entrada para comparação
+            var palavraSemAcentoNormalizada = RemoverAcentos(palavraSemAcento.ToLower());
+
+            // Busca na lista de palavras a versão acentuada
+            var palavraAcentuada = _palavras.FirstOrDefault(p =>
+                RemoverAcentos(p.ToLower()) == palavraSemAcentoNormalizada);
+
+            return palavraAcentuada;
+        }
+
+        public Dictionary<string, string> BuscarPalavrasAcentuadas(List<string> palavras)
+        {
+            var resultado = new Dictionary<string, string>();
+
+            foreach (var palavra in palavras)
+            {
+                var acentuada = BuscarPalavraAcentuada(palavra);
+                resultado[palavra.ToLower()] = acentuada ?? palavra;
+            }
+
+            return resultado;
         }
     }
 }
