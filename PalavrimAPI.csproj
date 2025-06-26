@@ -19,7 +19,8 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<None Update="PalavrimWordList\portuguese.txt">
+		<None Update="PalavrimWordList\teste.txt">
+			<!--<None Update="PalavrimWordList\portuguese.txt">-->
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
