@@ -41,7 +41,6 @@ aceto
 achai
 acham
 achar
-achei
 achem
 aches
 achou
@@ -61,9 +60,7 @@ acuse
 acuso
 adega
 adeus
-adiai
 adiam
-adiei
 adiem
 adiou
 adoça
@@ -85,7 +82,6 @@ afeto
 afiam
 afiar
 afias
-afiei
 afiem
 afina
 afine
@@ -113,7 +109,6 @@ aguço
 aguda
 agude
 agudo
-aguei
 aguem
 agues
 águia
@@ -232,9 +227,6 @@ babão
 babar
 bagre
 banal
-banam
-banar
-banas
 banca
 banco
 banda
@@ -250,8 +242,6 @@ beija
 bemol
 berço
 bicar
-bicas
-bicha
 bicho
 biela
 bipar
@@ -296,7 +286,6 @@ cague
 caiai
 caiam
 caiar
-caias
 caiba
 caibo
 caicó
@@ -430,8 +419,6 @@ envie
 época
 epóxi
 errar
-erras
-errei
 errem
 ervas
 escoa
@@ -692,7 +679,6 @@ laude
 laudo
 lavar
 lavas
-lavei
 leite
 lenço
 lenda
@@ -964,7 +950,6 @@ piões
 pipas
 pisar
 pisca
-pisei
 pisos
 pitar
 pivôs
@@ -1273,7 +1258,6 @@ solto
 somam
 somar
 somas
-somei
 somem
 sonar
 sonda
@@ -1303,14 +1287,12 @@ subiu
 sucos
 sugam
 sugar
-sugas
 sugou
 sugue
 suína
 suíno
 suíte
 sujar
-sujei
 sujem
 sujos
 sujou
@@ -1351,14 +1333,11 @@ taras
 tarda
 tarde
 tarja
-tarje
 taxam
 taxar
 taxas
-taxei
 taxem
 taxou
-tecei
 tecem
 tecer
 teces
@@ -1399,7 +1378,6 @@ tigre
 timão
 tipos
 tirar
-tirei
 tirem
 titãs
 tobas
@@ -1503,7 +1481,6 @@ tutor
 uivam
 uivar
 uivas
-uivei
 uivem
 uives
 uivos
@@ -1526,7 +1503,6 @@ unido
 untam
 untar
 untas
-untei
 untem
 untes
 untou
@@ -1555,9 +1531,7 @@ vagas
 vaiam
 vaiar
 vaias
-vaiei
 vaiem
-valei
 valem
 valer
 vales
@@ -1573,7 +1547,6 @@ varão
 varar
 varas
 vareá
-varei
 varem
 varoa
 varou
@@ -1592,7 +1565,6 @@ vejam
 velai
 velam
 velar
-velei
 velem
 velha
 velho
@@ -1622,8 +1594,6 @@ vespa
 veste
 vesti
 vetar
-vetas
-vetei
 vetem
 vetes
 vetor
@@ -1656,12 +1626,10 @@ viola
 viral
 viram
 vírea
-virei
 virem
 viril
 visar
 visco
-visei
 visou
 vista
 viste
@@ -1673,7 +1641,6 @@ vivam
 vivar
 vivas
 vivaz
-vivei
 vivem
 viver
 vives
@@ -1699,15 +1666,11 @@ vosso
 votam
 votar
 votas
-votei
 votem
 votes
 votos
 votou
 vozes
-vudus
-vulca
-vulco
 vulgo
 vulto
 vulva
