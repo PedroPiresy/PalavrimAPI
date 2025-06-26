@@ -14,8 +14,8 @@ builder.Services.AddSingleton(new PalavrimService(5));
 string[] allowedOriginsLocal = new[] { "http://localhost:5173", "http://localhost:5134" };
 string[] allowedOriginsProd = new[] { "https://palavrim.vercel.app" };
 
-string[] allowedOrigins = allowedOriginsLocal;
-//string[] allowedOrigins = allowedOriginsProd;
+//string[] allowedOrigins = allowedOriginsLocal;
+string[] allowedOrigins = allowedOriginsProd;
 
 builder.Services.AddCors(options =>
 {
