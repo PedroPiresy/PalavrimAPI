@@ -6,17 +6,25 @@ namespace PalavrimAPI.Services
     public class PalavrimService
     {
         private readonly List<string> _palavras;
+        private readonly List<string> _verbos;
         private readonly int _tamanhoPalavra;
 
         public PalavrimService(int tamanhoPalavra = 5)
         {
-            var caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PalavrimWordList", "portugueseV2.txt");
+            var caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PalavrimWordList", "palavras.txt");
             // MANTÉM os acentos aqui:
             _palavras = File.ReadAllLines(caminhoArquivo, Encoding.UTF8)
                             .Select(p => p.ToLower().Trim()) // não remove acentos
                             .Where(p => p.Length == tamanhoPalavra)
                             .Distinct()
                             .ToList();
+            
+            var caminhoVerbos = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PalavrimWordList", "verbos.txt");
+            _verbos = File.ReadAllLines(caminhoVerbos, Encoding.UTF8)
+                          .Select(p => p.ToLower().Trim())
+                          .Where(p => p.Length == tamanhoPalavra)
+                          .Distinct()
+                          .ToList();
 
             _tamanhoPalavra = tamanhoPalavra;
         }
@@ -33,13 +41,13 @@ namespace PalavrimAPI.Services
         {
             var seed = DateTime.UtcNow.Date.ToString("yyyyMMdd").GetHashCode();
             var rand = new Random(seed);
-            return _palavras[rand.Next(_palavras.Count)];
+            return _verbos[rand.Next(_verbos.Count)];
         }
 
         public string PalavraAleatoria()
         {
             var rand = new Random();
-            return _palavras[rand.Next(_palavras.Count)];
+            return _verbos[rand.Next(_verbos.Count)];
         }
 
         public List<string> BuscarPorPrefixo(string prefixo)
